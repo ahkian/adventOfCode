@@ -11,15 +11,20 @@ dayOnePartOne(input)
 function dayOnePartTwo (array) {
   var charMap = {}
   var curVal = 0
+  var found = false
+  let i = 0
   // Needs to be replaced with a while loop to break when a frequency is found twice.
-  for (let i = 0; i < array.length; i++) {
-    curVal += array[i]
-    if (charMap[curVal]) {
+  while (found === false) {
+    let length = array.length
+    if (charMap[curVal + array[i % length]]) {
+      found = true
       return curVal
     } else {
+      curVal += array[i % length]
       charMap[curVal] = 1
+      i++
     }
   }
-  return (Object.keys(charMap).sort())
+  return 'Failed!'
 }
 dayOnePartTwo(input)
