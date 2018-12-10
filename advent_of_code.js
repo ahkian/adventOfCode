@@ -34,4 +34,12 @@ var newInput = 'luojygedpvsthptkxiwnaorzmq,lucjqgedppsbhftkxiwnaorlmq,lucjmgefpv
 function checksum (array) {
   var twoCount = 0
   var threeCount = 0
+  var charMap = {}
+  for (let i = 0; i < array.length - 1; i++) {
+    if (charMap[array[i]]) {
+      charMap[array[i]] += 1
+    } else {
+      charMap[array[i]] = 1
+    }
+  }
 }
