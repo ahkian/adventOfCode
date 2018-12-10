@@ -42,4 +42,7 @@ function checksum (array) {
       charMap[array[i]] = 1
     }
   }
+  for (var letter in charMap) {
+    console.log("hi")
+  }
 }
