@@ -56,7 +56,6 @@ function checksum (array) {
     if (values.includes(3)) {
       threeCount += 1
     }
-    console.log('twoCount: ', twoCount, 'threeCount: ', threeCount)
   }
   return (threeCount * twoCount)
 }
