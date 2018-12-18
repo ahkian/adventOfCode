@@ -60,3 +60,10 @@ function checksum (array) {
   return (threeCount * twoCount)
 }
 console.log(checksum(newInput))
+
+// Find two strings which have exactly one character that's different from each other and return the common letters
+// oneDiff('abcde', fghij, klmno, pqrst, fguij, axcye, wvxyz) => fgij
+
+function oneDiff (array) {
+
+}
