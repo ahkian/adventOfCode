@@ -65,5 +65,12 @@ console.log(checksum(newInput))
 // oneDiff('abcde', fghij, klmno, pqrst, fguij, axcye, wvxyz) => fgij
 
 function oneDiff (array) {
-
+  var found = false
+  var iterations = 0
+  while (!found) {
+    if (iterations > array.length) {
+      found = !found
+    }
+  }
+  return 'No matches found'
 }
