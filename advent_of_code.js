@@ -52,7 +52,8 @@ function checksum (array) {
     }
     if (values.includes(2)) {
       twoCount += 1
-    } else if (values.includes(3)) {
+    }
+    if (values.includes(3)) {
       threeCount += 1
     }
     console.log('twoCount: ', twoCount, 'threeCount: ', threeCount)
