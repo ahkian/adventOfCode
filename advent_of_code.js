@@ -66,11 +66,28 @@ console.log(checksum(newInput))
 
 function oneDiff (array) {
   var found = false
-  var iterations = 0
+  var i = 0
   while (!found) {
-    if (iterations > array.length) {
+    for (let i = 0; i < array.length - 2; i++) {
+      let differences = 0
+      let iWord = array[i]
+      for (let j = 1; j < array.length - 1; j++){
+        let jWord = array[j]
+        for (let p = 0; p < iWord.length - 1; p++){
+          if (iWord[p] !== jWord[p]){
+            differences++
+          }
+        }
+        if (differences === 1) {
+          return array[i]
+        }
+        differences = 0
+      }
+    }
+    if (i > array.length) {
       found = !found
     }
+    i++
   }
   return 'No matches found'
 }
